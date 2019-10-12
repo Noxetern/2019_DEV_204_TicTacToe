@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  BoardViewController.swift
 //  TicTacToe
 //
 //  Created by Ben Algoet on 13/10/2019.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class BoardViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
