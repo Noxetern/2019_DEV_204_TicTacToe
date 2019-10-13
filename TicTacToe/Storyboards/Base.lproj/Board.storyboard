@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Board View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TicTacToe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="BoardViewController" customModule="TicTacToe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -28,16 +28,25 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="121.5" height="121.5"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" image="Cross"/>
+                                                        <connections>
+                                                            <action selector="tapSquare:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kvB-gb-H2Y"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zVF-JD-8lC" customClass="SquareButtonView" customModule="TicTacToe" customModuleProvider="target">
                                                         <rect key="frame" x="126.5" y="0.0" width="121" height="121.5"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" image="Nought"/>
+                                                        <connections>
+                                                            <action selector="tapSquare:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mVp-mJ-t3B"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jv7-of-a4m" customClass="SquareButtonView" customModule="TicTacToe" customModuleProvider="target">
                                                         <rect key="frame" x="252.5" y="0.0" width="121.5" height="121.5"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" image="Cross"/>
+                                                        <connections>
+                                                            <action selector="tapSquare:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GjZ-Q6-h9j"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -48,17 +57,26 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="121.5" height="121"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" image="Cross"/>
+                                                        <connections>
+                                                            <action selector="tapSquare:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BDS-Gw-06z"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sSC-j1-PzA" customClass="SquareButtonView" customModule="TicTacToe" customModuleProvider="target">
                                                         <rect key="frame" x="126.5" y="0.0" width="121" height="121"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" image="Nought"/>
+                                                        <connections>
+                                                            <action selector="tapSquare:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J2P-Vc-ENM"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R2k-Rn-NSn" customClass="SquareButtonView" customModule="TicTacToe" customModuleProvider="target">
                                                         <rect key="frame" x="252.5" y="0.0" width="121.5" height="121"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="10"/>
                                                         <state key="normal" image="Cross"/>
+                                                        <connections>
+                                                            <action selector="tapSquare:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yp3-xg-sQA"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -69,17 +87,26 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="121.5" height="121.5"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" image="Nought"/>
+                                                        <connections>
+                                                            <action selector="tapSquare:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NdB-hB-aKO"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T7H-58-nvN" customClass="SquareButtonView" customModule="TicTacToe" customModuleProvider="target">
                                                         <rect key="frame" x="126.5" y="0.0" width="121" height="121.5"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" image="Cross"/>
+                                                        <connections>
+                                                            <action selector="tapSquare:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vuu-K0-QaF"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ep5-kg-ynS" customClass="SquareButtonView" customModule="TicTacToe" customModuleProvider="target">
                                                         <rect key="frame" x="252.5" y="0.0" width="121.5" height="121.5"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" image="Nought"/>
+                                                        <connections>
+                                                            <action selector="tapSquare:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z9S-TS-7zf"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
