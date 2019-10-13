@@ -25,7 +25,7 @@
 		B97DD0B32352889E007C9B0D /* Board.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B97DD0B12352889E007C9B0D /* Board.storyboard */; };
 		B97DD0B5235288B1007C9B0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B97DD0B4235288B1007C9B0D /* Assets.xcassets */; };
 		B97DD0B8235288B1007C9B0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B97DD0B6235288B1007C9B0D /* LaunchScreen.storyboard */; };
-		B97DD0CE235288B2007C9B0D /* TicTacToeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97DD0CD235288B2007C9B0D /* TicTacToeUITests.swift */; };
+		B97DD0CE235288B2007C9B0D /* BoardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97DD0CD235288B2007C9B0D /* BoardUITests.swift */; };
 		EA7FB0D62F3D2BB591F47D9F /* Pods_TicTacToeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1B287C06FC1D31C0FE847FD /* Pods_TicTacToeTests.framework */; };
 		F6DD34CB7D68AB932BB04455 /* Pods_TicTacToe_TicTacToeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63BE33598D7BAE352B9484FC /* Pods_TicTacToe_TicTacToeUITests.framework */; };
 /* End PBXBuildFile section */
@@ -78,7 +78,7 @@
 		B97DD0BE235288B2007C9B0D /* TicTacToeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TicTacToeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B97DD0C4235288B2007C9B0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B97DD0C9235288B2007C9B0D /* TicTacToeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TicTacToeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B97DD0CD235288B2007C9B0D /* TicTacToeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeUITests.swift; sourceTree = "<group>"; };
+		B97DD0CD235288B2007C9B0D /* BoardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardUITests.swift; sourceTree = "<group>"; };
 		B97DD0CF235288B2007C9B0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F1B287C06FC1D31C0FE847FD /* Pods_TicTacToeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TicTacToeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -192,7 +192,7 @@
 		B97DD0CC235288B2007C9B0D /* TicTacToeUITests */ = {
 			isa = PBXGroup;
 			children = (
-				B97DD0CD235288B2007C9B0D /* TicTacToeUITests.swift */,
+				B97DD0CD235288B2007C9B0D /* BoardUITests.swift */,
 				B97DD0CF235288B2007C9B0D /* Info.plist */,
 			);
 			path = TicTacToeUITests;
@@ -547,7 +547,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B97DD0CE235288B2007C9B0D /* TicTacToeUITests.swift in Sources */,
+				B97DD0CE235288B2007C9B0D /* BoardUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
