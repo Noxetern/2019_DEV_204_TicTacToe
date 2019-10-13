@@ -10,34 +10,43 @@ import UIKit
 
 class BoardViewController: UIViewController {
 
+    var viewModel: BoardViewModel = BoardViewModel(game: Game())
+
     @IBOutlet weak var resetButton: UIButton!
     @IBOutlet weak var gameStateLabel: UILabel!
 
+    // MARK: - Actions
     @IBAction func tapSquare(_ sender: SquareButtonView) {
-
+        viewModel.updateBoardAt(sender) { [unowned self] isFinished in
+            self.gameStateLabel.text = self.viewModel.gameStateText
+            self.resetButton.isHidden = !isFinished
+        }
     }
 
     @IBAction func playAgain(_ sender: UIButton) {
+        viewModel.resetBoard()
+        setupInitialView()
     }
+
+    // MARK: - Setup
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setupView()
+        setupInitialView()
     }
 
-    private func setupView() {
-        // TODO: Show base gamestate info
-        // TODO: resetButton should hide/show based on gamestate
-        resetButton.isHidden = true
+    private func setupInitialView() {
+        gameStateLabel.text = viewModel.gameStateText
+        resetButton.isHidden = !viewModel.showResetButton
         resetSquares()
     }
 
     private func resetSquares() {
-        // Set images of all 9 SquareButtonViews back to nil
+        // Set status of all squareButtons back to .empty
         for i in 1...9 {
             guard let squareButtonView = view.viewWithTag(i) as? SquareButtonView else { return }
-            squareButtonView.setImage(nil, for: .normal)
+            squareButtonView.status = .empty
         }
     }
 

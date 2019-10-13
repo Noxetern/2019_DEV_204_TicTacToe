@@ -11,6 +11,13 @@ import UIKit
 
 class SquareButtonView: UIButton {
 
+    // Initial status is always empty
+    var status: SquareStatus = .empty {
+        didSet {
+            self.setImage(status.image, for: .normal)
+        }
+    }
+
     override func awakeFromNib() {
         super.awakeFromNib()
 
