@@ -12,7 +12,7 @@ enum GameState: Equatable {
     case draw
     case wonBy(_ player: Player)
     case turnOff(_ player: Player)
-    
+
     var description: String {
         switch self {
         case .draw:
@@ -23,10 +23,10 @@ enum GameState: Equatable {
             return player == Player.X ? "Player X turn" : "Player O turn"
         }
     }
-    
+
     var isGameOver: Bool {
         switch self {
-        case .turnOff(_):
+        case .turnOff:
             return false
         default:
             return true

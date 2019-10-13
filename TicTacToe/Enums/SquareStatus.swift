@@ -16,7 +16,7 @@ enum SquareStatus: Equatable {
         switch self {
         case .empty:
             return true
-        case .OccupiedBy(_):
+        case .OccupiedBy:
             return false
         }
     }

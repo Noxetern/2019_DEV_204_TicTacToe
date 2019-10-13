@@ -27,18 +27,18 @@ class GameStateTests: XCTestCase {
     }
 
     // MARK: - Player tests
-    
+
     func testCurrentGameState() {
         XCTAssertEqual(state, GameState.turnOff(Player.X))
     }
-    
+
     func testStateDescription() {
         XCTAssertEqual(state.description, "Player X turn")
     }
-    
+
     func testIsGameOver() {
         state = .wonBy(Player.O)
-        
+
         XCTAssertTrue(state.isGameOver)
     }
 

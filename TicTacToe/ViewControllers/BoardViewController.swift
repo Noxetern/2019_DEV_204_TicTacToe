@@ -9,12 +9,12 @@
 import UIKit
 
 class BoardViewController: UIViewController {
-    
+
     var viewModel: BoardViewModel = BoardViewModel(game: Game())
 
     @IBOutlet weak var resetButton: UIButton!
     @IBOutlet weak var gameStateLabel: UILabel!
-    
+
     // MARK: - Actions
     @IBAction func tapSquare(_ sender: SquareButtonView) {
         viewModel.updateBoardAt(sender) { [unowned self] isFinished in
@@ -29,7 +29,7 @@ class BoardViewController: UIViewController {
     }
 
     // MARK: - Setup
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 

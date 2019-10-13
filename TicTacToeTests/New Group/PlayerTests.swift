@@ -25,15 +25,15 @@ class PlayerTests: XCTestCase {
     }
 
     // MARK: - Player tests
-    
+
     func testCurrentPlayerX() {
         XCTAssertEqual(currentPlayer, Player.X)
     }
-    
+
     func testPlayerName() {
         XCTAssertEqual(currentPlayer.name, "Cross")
     }
-    
+
     func testNextPlayer() {
         XCTAssertEqual(currentPlayer.next, Player.O)
         XCTAssertEqual(currentPlayer.next.name, "Nought")

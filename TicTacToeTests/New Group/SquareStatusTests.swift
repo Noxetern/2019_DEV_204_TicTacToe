@@ -27,23 +27,23 @@ class SquareStatusTests: XCTestCase {
     }
 
     // MARK: - Player tests
-    
+
     func testCurrentStatus() {
         XCTAssertEqual(status, SquareStatus.empty)
     }
-    
+
     func testIsEmpty() {
         XCTAssertTrue(status.isEmpty)
     }
-    
+
     func testNoPlayerImage() {
         XCTAssertNil(status.image)
     }
-    
+
     func testPlayerImage() {
         status = .OccupiedBy(.O)
         let noughtImage = UIImage(named: "Nought.png")
-        
+
         XCTAssertEqual(status.image, noughtImage)
     }
 

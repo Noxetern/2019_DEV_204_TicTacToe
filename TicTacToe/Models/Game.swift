@@ -48,7 +48,7 @@ class Game {
         currentPlayer = currentPlayer.next
         gameState = .turnOff(currentPlayer)
     }
-    
+
     // MARK: - Game Over
 
     func checkForWinner() -> Player? {
@@ -72,9 +72,9 @@ class Game {
 
         return false
     }
-    
+
     // MARK: - Reset game
-    
+
     func resetBoardState() {
         currentPlayer = Player.X
         gameState = .turnOff(currentPlayer)

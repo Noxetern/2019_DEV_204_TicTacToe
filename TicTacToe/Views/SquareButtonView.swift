@@ -17,7 +17,7 @@ class SquareButtonView: UIButton {
             self.setImage(status.image, for: .normal)
         }
     }
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
 
