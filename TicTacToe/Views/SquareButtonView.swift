@@ -13,7 +13,7 @@ class SquareButtonView: UIButton {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-    
+
         // Set default image insets
         let inset: CGFloat = 10
         self.imageEdgeInsets = UIEdgeInsets(top: inset, left: inset, bottom: inset, right: inset)
