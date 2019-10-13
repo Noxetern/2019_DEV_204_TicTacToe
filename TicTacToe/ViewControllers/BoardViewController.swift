@@ -9,17 +9,25 @@
 import UIKit
 
 class BoardViewController: UIViewController {
+    
+    var viewModel: BoardViewModel = BoardViewModel(game: Game())
 
     @IBOutlet weak var resetButton: UIButton!
     @IBOutlet weak var gameStateLabel: UILabel!
-
+    
+    // MARK: - Actions
     @IBAction func tapSquare(_ sender: SquareButtonView) {
-
+        viewModel.updateBoardAt(sender) { [unowned self] isFinished in
+            self.gameStateLabel.text = self.viewModel.gameStateText
+            self.resetButton.isHidden = !isFinished
+        }
     }
 
     @IBAction func playAgain(_ sender: UIButton) {
     }
 
+    // MARK: - Setup
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,9 +35,8 @@ class BoardViewController: UIViewController {
     }
 
     private func setupView() {
-        // TODO: Show base gamestate info
-        // TODO: resetButton should hide/show based on gamestate
-        resetButton.isHidden = true
+        gameStateLabel.text = viewModel.gameStateText
+        resetButton.isHidden = !viewModel.showResetButton
         resetSquares()
     }
 
