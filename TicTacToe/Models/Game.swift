@@ -48,6 +48,29 @@ class Game {
         currentPlayer = currentPlayer.next
         gameState = .turnOff(currentPlayer)
     }
+    
+    // MARK: - Game Over
+
+    func checkForWinner() -> Player? {
+        for line in winningLines {
+            let row = line.map { boardValues[$0] }
+            if row[0] != 0 && row[0] == row[1] && row[1] == row[2] {
+                gameState = GameState.wonBy(currentPlayer)
+                return currentPlayer
+            }
+        }
+        return nil
+    }
+
+    func checkForDraw() -> Bool {
+        let blankValues = boardValues.filter { $0 == 0 }
+
+        if blankValues.isEmpty {
+            gameState = GameState.draw
+            return true
+        }
+
+        return false
+    }
 
 }
-

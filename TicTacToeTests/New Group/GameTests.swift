@@ -60,5 +60,71 @@ class GameTests: XCTestCase {
         XCTAssertEqual(game.gameState, GameState.turnOff(Player.O))
     }
     
+    // MARK: - Game Over
+    
+    func testCheckForWinner() {
+        /*:
+         Given:
+            x x x
+            o x o
+            o o -
+        */
+        game.boardValues = [1, 1, 1, 2, 1, 2, 2, 2, 0]
+        
+        // When
+        let winner = game.checkForWinner()
+        
+        // Then
+        XCTAssertEqual(winner, Player.X)
+    }
+    
+    func testCheckNoWinner() {
+        /*:
+         Given:
+            - - -
+            x o x
+            o x o
+        */
+        game.boardValues = [0, 0, 0, 1, 2, 1, 2, 1, 2]
+        
+        // When
+        let winner = game.checkForWinner()
+        
+        // Then
+        XCTAssertEqual(winner, nil)
+    }
+    
+    func testCheckForDraw() {
+        /*:
+         Given:
+            x o x
+            x o x
+            o x o
+        */
+        game.boardValues = [1, 2, 1, 1, 2, 1, 2, 1, 2]
+        
+        // When
+        let isDraw = game.checkForDraw()
+        
+        // Then
+        XCTAssertTrue(isDraw)
+    }
+    
+    func testCheckNoDraw() {
+        /*:
+         Given:
+            - - -
+            x o x
+            o x o
+        */
+        game.boardValues = [0, 0, 0, 1, 2, 1, 2, 1, 2]
+        
+        // When
+        let isDraw = game.checkForDraw()
+        
+        // Then
+        XCTAssertFalse(isDraw)
+    }
+    
 }
 
