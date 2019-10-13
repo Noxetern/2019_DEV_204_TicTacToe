@@ -15,6 +15,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="R47-H4-bYF">
+                                <rect key="frame" x="158" y="190.5" width="98" height="20.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player X turn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zrB-bS-j7E" userLabel="GameStateLabel">
+                                        <rect key="frame" x="0.0" y="0.0" width="98" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EEC-sw-jRw" userLabel="GridView">
                                 <rect key="frame" x="20" y="261" width="374" height="374"/>
                                 <subviews>
@@ -121,19 +132,42 @@
                                     <constraint firstItem="ZW1-Bd-xzy" firstAttribute="top" secondItem="EEC-sw-jRw" secondAttribute="top" id="zXy-r5-dHk"/>
                                 </constraints>
                             </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ULA-yM-ICy">
+                                <rect key="frame" x="172" y="685" width="70" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DR0-rl-1g8" userLabel="ResetButton">
+                                        <rect key="frame" x="0.0" y="0.0" width="70" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="4VA-AB-Ffm"/>
+                                        </constraints>
+                                        <state key="normal" title="Play again"/>
+                                        <connections>
+                                            <action selector="playAgain:" destination="BYZ-38-t0r" eventType="touchUpInside" id="O40-Nu-rPM"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="EEC-sw-jRw" secondAttribute="bottom" constant="20" id="1bW-9S-2Zn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ULA-yM-ICy" secondAttribute="bottom" constant="20" id="1KZ-nA-tyW"/>
+                            <constraint firstItem="ULA-yM-ICy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7uZ-Th-jHc"/>
                             <constraint firstItem="EEC-sw-jRw" firstAttribute="width" secondItem="EEC-sw-jRw" secondAttribute="height" id="Mg6-an-K4k"/>
+                            <constraint firstItem="R47-H4-bYF" firstAttribute="top" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="PGP-TP-vQi"/>
+                            <constraint firstItem="R47-H4-bYF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="c2O-dn-jFl"/>
                             <constraint firstItem="EEC-sw-jRw" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="fZe-7H-2bf"/>
-                            <constraint firstItem="EEC-sw-jRw" firstAttribute="top" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="mHP-hK-eZl"/>
+                            <constraint firstItem="EEC-sw-jRw" firstAttribute="top" secondItem="R47-H4-bYF" secondAttribute="bottom" constant="50" id="j9J-By-eEv"/>
                             <constraint firstItem="EEC-sw-jRw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="nAW-BH-HAd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EEC-sw-jRw" secondAttribute="trailing" constant="20" id="sKb-XJ-HbM"/>
                             <constraint firstItem="EEC-sw-jRw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uNd-lz-nVc"/>
+                            <constraint firstItem="ULA-yM-ICy" firstAttribute="top" secondItem="EEC-sw-jRw" secondAttribute="bottom" constant="50" id="wU7-iu-dZh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="gameStateLabel" destination="zrB-bS-j7E" id="agc-Gs-zJP"/>
+                        <outlet property="resetButton" destination="DR0-rl-1g8" id="4s4-Zb-Ac4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
