@@ -16,8 +16,8 @@ class GameStateTests: XCTestCase {
 
     override func setUp() {
         super.setUp()
-        currentPlayer = Player.X
-        state = GameState.turnOff(currentPlayer)
+        currentPlayer = .X
+        state = .turnOff(currentPlayer)
 
     }
 
@@ -37,7 +37,7 @@ class GameStateTests: XCTestCase {
     }
     
     func testIsGameOver() {
-        state = GameState.wonBy(Player.O)
+        state = .wonBy(Player.O)
         
         XCTAssertTrue(state.isGameOver)
     }

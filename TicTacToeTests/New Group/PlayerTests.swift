@@ -15,7 +15,7 @@ class PlayerTests: XCTestCase {
 
     override func setUp() {
         super.setUp()
-        currentPlayer = Player.X
+        currentPlayer = .X
 
     }
 

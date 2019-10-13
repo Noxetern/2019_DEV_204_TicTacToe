@@ -34,10 +34,10 @@ class BoardViewController: UIViewController {
     }
 
     private func resetSquares() {
-        // Set images of all 9 SquareButtonViews back to nil
+        // Set status of all squareButtons back to .empty
         for i in 1...9 {
             guard let squareButtonView = view.viewWithTag(i) as? SquareButtonView else { return }
-            squareButtonView.setImage(nil, for: .normal)
+            squareButtonView.status = .empty
         }
     }
 
