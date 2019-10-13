@@ -25,14 +25,13 @@ class BoardUITests: XCTestCase {
         app.terminate()
         app = nil
     }
+    
+    // MARK: - Square behaviour
 
     // Test if 9 squares are present
     func testVisibleSquares() {
         for i in 1...9 {
-            // Given
             let square = app.buttons["Square \(i)"]
-            
-            // Then
             XCTAssertTrue(square.waitForExistence(timeout: 1))
         }
     }
@@ -53,7 +52,6 @@ class BoardUITests: XCTestCase {
         
         // Validate screenshot before and after are the same
         XCTAssertEqual(screenshotBefore.pngRepresentation, screenshotAfter.pngRepresentation)
-        
     }
     
     // Test if player changes from X to O
@@ -77,7 +75,47 @@ class BoardUITests: XCTestCase {
         // ScreenshotBefore should contain 1 X
         // ScreenshotAfter should contain both an X and O
         XCTAssertNotEqual(screenshotBefore.pngRepresentation, screenshotAfter.pngRepresentation)
-    
     }
     
+    // MARK: - Game flow
+    
+    /*:
+        x o x
+        o x o
+        x - -
+    */
+    func testGameWin() {
+        
+        for i in 1...9 {
+            app.buttons["Square \(i)"].tap()
+        }
+        
+        // X should have won
+        let gameStateLabel = app.staticTexts["GameState"]
+        XCTAssertEqual(gameStateLabel.label, "Player X win")
+        // resetButton should be hittable
+        let resetButton = app.buttons["ResetButton"]
+        XCTAssertTrue(resetButton.isHittable)
+    }
+    
+    /*:
+        x o x
+        x o x
+        o x o
+    */
+    func testGameDraw() {
+        
+        // The sequence our test needs to tap to declare a draw
+        let tapSequence = [1, 2, 3, 5, 4, 7, 6, 9, 8]
+        for i in tapSequence {
+            app.buttons["Square \(i)"].tap()
+        }
+        
+        // Game should be draw
+        let gameStateLabel = app.staticTexts["GameState"]
+        XCTAssertEqual(gameStateLabel.label, "Draw")
+        // resetButton should be hittable
+        let resetButton = app.buttons["ResetButton"]
+        XCTAssertTrue(resetButton.isHittable)
+    }
 }

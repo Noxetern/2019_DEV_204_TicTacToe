@@ -34,6 +34,14 @@ class BoardViewModel {
         return game.gameState.description
     }
     
+    var resetButtonIdentifier: String {
+        return "ResetButton"
+    }
+    
+    var gameStateLabelIdentifier: String {
+        return "GameState"
+    }
+    
     // MARK: - Fetch squares
     
     func allSquares(_ view: UIView) -> [SquareButtonView] {

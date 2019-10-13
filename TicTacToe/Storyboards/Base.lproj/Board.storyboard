@@ -150,7 +150,9 @@
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <accessibility key="accessibilityConfiguration" identifier="MainView"/>
+                        <accessibility key="accessibilityConfiguration" identifier="MainView">
+                            <bool key="isElement" value="NO"/>
+                        </accessibility>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ULA-yM-ICy" secondAttribute="bottom" constant="20" id="1KZ-nA-tyW"/>
                             <constraint firstItem="ULA-yM-ICy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7uZ-Th-jHc"/>

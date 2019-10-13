@@ -34,7 +34,7 @@ class BoardViewController: UIViewController {
         super.viewDidLoad()
 
         setupInitialView()
-        addSquareIdentifiers()
+        addIdentifiers()
     }
 
     private func setupInitialView() {
@@ -49,8 +49,10 @@ class BoardViewController: UIViewController {
         viewModel.allSquares(view).forEach { $0.status = .empty }
     }
     
-    private func addSquareIdentifiers() {
+    private func addIdentifiers() {
         viewModel.allSquares(view).forEach { $0.accessibilityIdentifier = "Square \($0.tag)" }
+        resetButton.accessibilityIdentifier = viewModel.resetButtonIdentifier
+        gameStateLabel.accessibilityIdentifier = viewModel.gameStateLabelIdentifier
     }
 
 }
