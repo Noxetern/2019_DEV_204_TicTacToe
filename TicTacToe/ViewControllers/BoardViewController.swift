@@ -9,9 +9,9 @@
 import UIKit
 
 class BoardViewController: UIViewController {
-    
+
     @IBAction func tapSquare(_ sender: SquareButtonView) {
-        
+
     }
 
     override func viewDidLoad() {
