@@ -38,7 +38,7 @@ class Game {
     // MARK: - Update board
 
     func updateBoardValue(index: Int) -> Bool {
-        guard boardValues[index] == 0 else { return false }
+        guard boardValues[index] == 0 && !gameState.isGameOver else { return false }
 
         boardValues[index] = currentPlayer.rawValue
         return true
