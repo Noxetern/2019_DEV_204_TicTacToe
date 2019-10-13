@@ -24,6 +24,8 @@ class BoardViewController: UIViewController {
     }
 
     @IBAction func playAgain(_ sender: UIButton) {
+        viewModel.resetBoard()
+        setupInitialView()
     }
 
     // MARK: - Setup
@@ -31,10 +33,10 @@ class BoardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setupView()
+        setupInitialView()
     }
 
-    private func setupView() {
+    private func setupInitialView() {
         gameStateLabel.text = viewModel.gameStateText
         resetButton.isHidden = !viewModel.showResetButton
         resetSquares()

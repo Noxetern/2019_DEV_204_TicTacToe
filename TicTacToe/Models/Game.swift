@@ -72,5 +72,13 @@ class Game {
 
         return false
     }
+    
+    // MARK: - Reset game
+    
+    func resetBoardState() {
+        currentPlayer = Player.X
+        gameState = .turnOff(currentPlayer)
+        boardValues = [Int](repeating: 0, count: 9)
+    }
 
 }

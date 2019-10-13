@@ -65,4 +65,19 @@ class BoardViewModelTests: XCTestCase {
         }
     }
     
+    // MARK: - Reset board
+    
+    func testResetBoard() {
+        // Given
+        game.gameState = .draw
+        
+        // When
+        viewModel = BoardViewModel(game: game)
+        viewModel.isFinished = true
+        viewModel.resetBoard()
+        
+        // Then
+        XCTAssertFalse(viewModel.isFinished)
+    }
+    
 }

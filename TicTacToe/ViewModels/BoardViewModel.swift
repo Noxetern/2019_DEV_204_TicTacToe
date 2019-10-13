@@ -11,7 +11,7 @@ import UIKit
 class BoardViewModel {
     
     private var game: Game
-    private var isFinished: Bool
+    var isFinished: Bool
 
     // MARK: - Init
     
@@ -53,6 +53,13 @@ class BoardViewModel {
         }
         
         completion(isFinished)
+    }
+    
+    // MARK: - Reset board
+    
+    func resetBoard() {
+        game.resetBoardState()
+        isFinished = false
     }
     
 

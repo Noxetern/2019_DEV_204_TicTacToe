@@ -126,5 +126,28 @@ class GameTests: XCTestCase {
         XCTAssertFalse(isDraw)
     }
     
+    // MARK: - Reset game
+    
+    func testResetBoard() {
+        /*:
+         Given:
+            x o x
+            x o x
+            o x o
+        */
+        game.boardValues = [1, 2, 1, 1, 2, 1, 2, 1, 2]
+        game.gameState = .draw
+        game.currentPlayer = .O
+        
+        // When
+        game.resetBoardState()
+        
+        // Then
+        XCTAssertEqual(game.currentPlayer, Player.X)
+        XCTAssertEqual(game.gameState, GameState.turnOff(Player.X))
+        XCTAssertEqual(game.boardValues, [Int](repeating: 0, count: 9))
+        
+    }
+    
 }
 
