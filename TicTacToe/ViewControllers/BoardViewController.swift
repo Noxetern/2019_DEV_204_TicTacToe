@@ -34,6 +34,7 @@ class BoardViewController: UIViewController {
         super.viewDidLoad()
 
         setupInitialView()
+        addIdentifiers()
     }
 
     private func setupInitialView() {
@@ -41,13 +42,17 @@ class BoardViewController: UIViewController {
         resetButton.isHidden = !viewModel.showResetButton
         resetSquares()
     }
-
+    
+    // MARK: - Square helpers
+    
     private func resetSquares() {
-        // Set status of all squareButtons back to .empty
-        for i in 1...9 {
-            guard let squareButtonView = view.viewWithTag(i) as? SquareButtonView else { return }
-            squareButtonView.status = .empty
-        }
+        viewModel.allSquares(view).forEach { $0.status = .empty }
+    }
+    
+    private func addIdentifiers() {
+        viewModel.allSquares(view).forEach { $0.accessibilityIdentifier = "Square \($0.tag)" }
+        resetButton.accessibilityIdentifier = viewModel.resetButtonIdentifier
+        gameStateLabel.accessibilityIdentifier = viewModel.gameStateLabelIdentifier
     }
 
 }

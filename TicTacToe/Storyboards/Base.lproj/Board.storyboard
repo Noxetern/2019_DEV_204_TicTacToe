@@ -10,7 +10,7 @@
         <!--Board View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="BoardViewController" customModule="TicTacToe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="boardViewController" id="BYZ-38-t0r" customClass="BoardViewController" customModule="TicTacToe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -125,6 +125,7 @@
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <accessibility key="accessibilityConfiguration" identifier="GridView"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="ZW1-Bd-xzy" secondAttribute="bottom" id="Q0B-BR-nm6"/>
                                     <constraint firstItem="ZW1-Bd-xzy" firstAttribute="leading" secondItem="EEC-sw-jRw" secondAttribute="leading" id="eya-go-daR"/>
@@ -149,6 +150,9 @@
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <accessibility key="accessibilityConfiguration" identifier="MainView">
+                            <bool key="isElement" value="NO"/>
+                        </accessibility>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ULA-yM-ICy" secondAttribute="bottom" constant="20" id="1KZ-nA-tyW"/>
                             <constraint firstItem="ULA-yM-ICy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7uZ-Th-jHc"/>
