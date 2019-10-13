@@ -33,6 +33,20 @@ class BoardViewModel {
     var gameStateText: String {
         return game.gameState.description
     }
+    
+    // MARK: - Fetch squares
+    
+    func allSquares(_ view: UIView) -> [SquareButtonView] {
+        var squares = [SquareButtonView]()
+        
+        for i in 1...9 {
+             if let squareButtonView = view.viewWithTag(i) as? SquareButtonView {
+            squares.append(squareButtonView)
+            }
+        }
+        
+        return squares.sorted { $0.tag < $1.tag }
+    }
 
     // MARK: - Update board
 

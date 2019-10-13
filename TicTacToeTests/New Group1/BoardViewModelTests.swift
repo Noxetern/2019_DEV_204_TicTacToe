@@ -13,11 +13,13 @@ class BoardViewModelTests: XCTestCase {
 
     var viewModel: BoardViewModel!
     var game: Game!
+    var boardViewController: BoardViewController!
 
     override func setUp() {
         super.setUp()
         game = Game()
         viewModel = BoardViewModel(game: game)
+        boardViewController = UIStoryboard(name: "Board", bundle: nil).instantiateViewController(withIdentifier: "boardViewController") as? BoardViewController
     }
 
     override func tearDown() {
@@ -49,6 +51,16 @@ class BoardViewModelTests: XCTestCase {
 
     func testGameStateText() {
         XCTAssertEqual(viewModel.gameStateText, game.gameState.description)
+    }
+    
+    // MARK: - Fetch squares
+    
+    func testAllSquares() {
+        // Given
+        let squares = viewModel.allSquares(boardViewController.view)
+        
+        // Then
+        XCTAssertTrue(squares.count == 9)
     }
 
     // MARK: - Update board
