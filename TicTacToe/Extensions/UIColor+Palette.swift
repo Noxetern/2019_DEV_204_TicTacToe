@@ -1,5 +1,5 @@
 //
-//  UIColor+custom.swift
+//  UIColor+Palette.swift
 //  TicTacToe
 //
 //  Created by Ben Algoet on 14/10/2019.
