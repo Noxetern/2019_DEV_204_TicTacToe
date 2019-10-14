@@ -32,5 +32,5 @@ enum GameState: Equatable {
             return true
         }
     }
-    
+
 }

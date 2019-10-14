@@ -52,13 +52,13 @@ class BoardViewModelTests: XCTestCase {
     func testGameStateText() {
         XCTAssertEqual(viewModel.gameStateText, game.gameState.description)
     }
-    
+
     // MARK: - Fetch squares
-    
+
     func testAllSquares() {
         // Given
         let squares = viewModel.allSquares(boardViewController.view)
-        
+
         // Then
         XCTAssertTrue(squares.count == 9)
     }

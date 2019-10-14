@@ -9,13 +9,13 @@
 import UIKit
 
 extension String {
-    
+
     func addColorAttribute(_ rangeText: String, color: UIColor) -> NSMutableAttributedString {
         let range = (self as NSString).range(of: rangeText)
-        
+
         let attributedString = NSMutableAttributedString(string: self)
         attributedString.addAttribute(.foregroundColor, value: color, range: range)
         return attributedString
     }
-    
+
 }

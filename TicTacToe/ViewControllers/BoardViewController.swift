@@ -43,13 +43,13 @@ class BoardViewController: UIViewController {
         resetButton.layer.cornerRadius = 10
         resetSquares()
     }
-    
+
     // MARK: - Square helpers
-    
+
     private func resetSquares() {
         viewModel.allSquares(view).forEach { $0.status = .empty }
     }
-    
+
     private func addIdentifiers() {
         viewModel.allSquares(view).forEach { $0.accessibilityIdentifier = "Square \($0.tag)" }
         resetButton.accessibilityIdentifier = viewModel.resetButtonIdentifier
