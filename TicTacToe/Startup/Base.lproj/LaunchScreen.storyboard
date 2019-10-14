@@ -16,13 +16,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tic Tac Toe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oNf-TC-xaw">
-                                <rect key="frame" x="150.5" y="435" width="113.5" height="26.5"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                <color key="textColor" red="0.18823529411764706" green="0.23529411764705882" blue="0.25882352941176467" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="135.5" y="431.5" width="143.5" height="33.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                <color key="textColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.36470588235294116" green="0.32941176470588235" blue="0.30980392156862746" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="oNf-TC-xaw" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="5DD-SM-Cgo"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="oNf-TC-xaw" secondAttribute="trailing" constant="20" id="FUr-vX-ngD"/>

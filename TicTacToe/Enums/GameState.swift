@@ -13,14 +13,14 @@ enum GameState: Equatable {
     case wonBy(_ player: Player)
     case turnOff(_ player: Player)
 
-    var description: String {
+    var description: NSMutableAttributedString {
         switch self {
         case .draw:
-            return "Draw"
+            return NSMutableAttributedString(string: "Draw")
         case .wonBy(let player):
-            return player == Player.X ? "Player X win" : "Player O win"
+            return player == .X ? "Player X wins".addColorAttribute("X", color: UIColor.BoardColor.crossBlue) : "Player O wins".addColorAttribute("O", color: UIColor.BoardColor.noughtYellow)
         case .turnOff(let player):
-            return player == Player.X ? "Player X turn" : "Player O turn"
+            return player == .X ? "Player X's turn".addColorAttribute("X", color: UIColor.BoardColor.crossBlue) : "Player O's turn".addColorAttribute("O", color: UIColor.BoardColor.noughtYellow)
         }
     }
 
@@ -32,4 +32,5 @@ enum GameState: Equatable {
             return true
         }
     }
+    
 }
