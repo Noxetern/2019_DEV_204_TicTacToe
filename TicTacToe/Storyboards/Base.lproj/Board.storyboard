@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Board View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="boardViewController" id="BYZ-38-t0r" customClass="BoardViewController" customModule="TicTacToe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="R47-H4-bYF">
+                                <rect key="frame" x="148.5" y="187" width="117" height="24"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player X turn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zrB-bS-j7E" userLabel="GameStateLabel">
+                                        <rect key="frame" x="0.0" y="0.0" width="117" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <color key="textColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EEC-sw-jRw" userLabel="GridView">
+                                <rect key="frame" x="20" y="261" width="374" height="374"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="ZW1-Bd-xzy" userLabel="GridStackView">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="374"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="CEG-Hs-lbI" userLabel="First Row">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="122.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pSx-j7-eLU" customClass="SquareButtonView" customModule="TicTacToe" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="122.5" height="122.5"/>
+                                                        <color key="backgroundColor" red="0.36470588240000001" green="0.3294117647" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <state key="normal" image="Cross"/>
+                                                        <connections>
+                                                            <action selector="tapSquare:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kvB-gb-H2Y"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zVF-JD-8lC" customClass="SquareButtonView" customModule="TicTacToe" customModuleProvider="target">
+                                                        <rect key="frame" x="125.5" y="0.0" width="123" height="122.5"/>
+                                                        <color key="backgroundColor" red="0.36470588240000001" green="0.3294117647" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <state key="normal" image="Nought"/>
+                                                        <connections>
+                                                            <action selector="tapSquare:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mVp-mJ-t3B"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jv7-of-a4m" customClass="SquareButtonView" customModule="TicTacToe" customModuleProvider="target">
+                                                        <rect key="frame" x="251.5" y="0.0" width="122.5" height="122.5"/>
+                                                        <color key="backgroundColor" red="0.36470588240000001" green="0.3294117647" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <state key="normal" image="Cross"/>
+                                                        <connections>
+                                                            <action selector="tapSquare:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GjZ-Q6-h9j"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="bIc-tX-p6r" userLabel="Second Row">
+                                                <rect key="frame" x="0.0" y="125.5" width="374" height="123"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LzP-6M-3KQ" customClass="SquareButtonView" customModule="TicTacToe" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="122.5" height="123"/>
+                                                        <color key="backgroundColor" red="0.36470588240000001" green="0.3294117647" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <state key="normal" image="Cross"/>
+                                                        <connections>
+                                                            <action selector="tapSquare:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BDS-Gw-06z"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sSC-j1-PzA" customClass="SquareButtonView" customModule="TicTacToe" customModuleProvider="target">
+                                                        <rect key="frame" x="125.5" y="0.0" width="123" height="123"/>
+                                                        <color key="backgroundColor" red="0.36470588240000001" green="0.3294117647" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <state key="normal" image="Nought"/>
+                                                        <connections>
+                                                            <action selector="tapSquare:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J2P-Vc-ENM"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R2k-Rn-NSn" customClass="SquareButtonView" customModule="TicTacToe" customModuleProvider="target">
+                                                        <rect key="frame" x="251.5" y="0.0" width="122.5" height="123"/>
+                                                        <color key="backgroundColor" red="0.36470588240000001" green="0.3294117647" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="10"/>
+                                                        <state key="normal" image="Cross"/>
+                                                        <connections>
+                                                            <action selector="tapSquare:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yp3-xg-sQA"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="AVu-gl-Lk8" userLabel="Third Row">
+                                                <rect key="frame" x="0.0" y="251.5" width="374" height="122.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VVp-Nj-QNq" customClass="SquareButtonView" customModule="TicTacToe" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="122.5" height="122.5"/>
+                                                        <color key="backgroundColor" red="0.36470588240000001" green="0.3294117647" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <state key="normal" image="Nought"/>
+                                                        <connections>
+                                                            <action selector="tapSquare:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NdB-hB-aKO"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T7H-58-nvN" customClass="SquareButtonView" customModule="TicTacToe" customModuleProvider="target">
+                                                        <rect key="frame" x="125.5" y="0.0" width="123" height="122.5"/>
+                                                        <color key="backgroundColor" red="0.36470588240000001" green="0.3294117647" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <state key="normal" image="Cross"/>
+                                                        <connections>
+                                                            <action selector="tapSquare:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vuu-K0-QaF"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ep5-kg-ynS" customClass="SquareButtonView" customModule="TicTacToe" customModuleProvider="target">
+                                                        <rect key="frame" x="251.5" y="0.0" width="122.5" height="122.5"/>
+                                                        <color key="backgroundColor" red="0.36470588240000001" green="0.3294117647" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                        <state key="normal" image="Nought"/>
+                                                        <connections>
+                                                            <action selector="tapSquare:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z9S-TS-7zf"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.50196078430000002" green="0.47843137250000001" blue="0.46274509800000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <accessibility key="accessibilityConfiguration" identifier="GridView"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="ZW1-Bd-xzy" secondAttribute="bottom" id="Q0B-BR-nm6"/>
+                                    <constraint firstItem="ZW1-Bd-xzy" firstAttribute="leading" secondItem="EEC-sw-jRw" secondAttribute="leading" id="eya-go-daR"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZW1-Bd-xzy" secondAttribute="trailing" id="iFk-ce-fi0"/>
+                                    <constraint firstItem="ZW1-Bd-xzy" firstAttribute="top" secondItem="EEC-sw-jRw" secondAttribute="top" id="zXy-r5-dHk"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ULA-yM-ICy">
+                                <rect key="frame" x="20" y="685" width="374" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DR0-rl-1g8" userLabel="ResetButton">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="44"/>
+                                        <color key="backgroundColor" red="0.50196078430000002" green="0.47843137250000001" blue="0.46274509800000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="4VA-AB-Ffm"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <state key="normal" title="Play again">
+                                            <color key="titleColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="playAgain:" destination="BYZ-38-t0r" eventType="touchUpInside" id="O40-Nu-rPM"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.36470588235294116" green="0.32941176470588235" blue="0.30980392156862746" alpha="1" colorSpace="calibratedRGB"/>
+                        <accessibility key="accessibilityConfiguration" identifier="MainView">
+                            <bool key="isElement" value="NO"/>
+                        </accessibility>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ULA-yM-ICy" secondAttribute="bottom" constant="20" id="1KZ-nA-tyW"/>
+                            <constraint firstItem="ULA-yM-ICy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7uZ-Th-jHc"/>
+                            <constraint firstItem="EEC-sw-jRw" firstAttribute="width" secondItem="EEC-sw-jRw" secondAttribute="height" id="Mg6-an-K4k"/>
+                            <constraint firstItem="ULA-yM-ICy" firstAttribute="leading" secondItem="EEC-sw-jRw" secondAttribute="leading" id="NWb-xb-U5b"/>
+                            <constraint firstItem="R47-H4-bYF" firstAttribute="top" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="PGP-TP-vQi"/>
+                            <constraint firstItem="ULA-yM-ICy" firstAttribute="trailing" secondItem="EEC-sw-jRw" secondAttribute="trailing" id="aIj-sl-wpu"/>
+                            <constraint firstItem="R47-H4-bYF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="c2O-dn-jFl"/>
+                            <constraint firstItem="EEC-sw-jRw" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="fZe-7H-2bf"/>
+                            <constraint firstItem="EEC-sw-jRw" firstAttribute="top" secondItem="R47-H4-bYF" secondAttribute="bottom" constant="50" id="j9J-By-eEv"/>
+                            <constraint firstItem="EEC-sw-jRw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="nAW-BH-HAd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EEC-sw-jRw" secondAttribute="trailing" constant="20" id="sKb-XJ-HbM"/>
+                            <constraint firstItem="EEC-sw-jRw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uNd-lz-nVc"/>
+                            <constraint firstItem="ULA-yM-ICy" firstAttribute="top" secondItem="EEC-sw-jRw" secondAttribute="bottom" constant="50" id="wU7-iu-dZh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="gameStateLabel" destination="zrB-bS-j7E" id="agc-Gs-zJP"/>
+                        <outlet property="resetButton" destination="DR0-rl-1g8" id="4s4-Zb-Ac4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="134"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Cross" width="256" height="256"/>
+        <image name="Nought" width="256" height="256"/>
+    </resources>
+</document>
