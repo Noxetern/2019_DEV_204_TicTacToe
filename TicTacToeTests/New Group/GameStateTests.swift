@@ -33,7 +33,7 @@ class GameStateTests: XCTestCase {
     }
 
     func testStateDescription() {
-        XCTAssertEqual(state.description, "Player X turn")
+        XCTAssertEqual(state.description, "Player X's turn")
     }
 
     func testIsGameOver() {

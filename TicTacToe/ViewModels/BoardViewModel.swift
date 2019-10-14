@@ -30,7 +30,7 @@ class BoardViewModel {
         return game.gameState.isGameOver
     }
 
-    var gameStateText: String {
+    var gameStateText: NSMutableAttributedString {
         return game.gameState.description
     }
     

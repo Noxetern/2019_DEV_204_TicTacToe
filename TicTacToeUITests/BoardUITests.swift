@@ -92,7 +92,7 @@ class BoardUITests: XCTestCase {
         
         // X should have won
         let gameStateLabel = app.staticTexts["GameState"]
-        XCTAssertEqual(gameStateLabel.label, "Player X win")
+        XCTAssertEqual(gameStateLabel.label, "Player X wins")
         // resetButton should be hittable
         let resetButton = app.buttons["ResetButton"]
         XCTAssertTrue(resetButton.isHittable)

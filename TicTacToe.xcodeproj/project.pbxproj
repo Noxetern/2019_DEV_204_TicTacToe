@@ -26,6 +26,8 @@
 		B97DD0B5235288B1007C9B0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B97DD0B4235288B1007C9B0D /* Assets.xcassets */; };
 		B97DD0B8235288B1007C9B0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B97DD0B6235288B1007C9B0D /* LaunchScreen.storyboard */; };
 		B97DD0CE235288B2007C9B0D /* BoardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97DD0CD235288B2007C9B0D /* BoardUITests.swift */; };
+		B99580952353F8FA0018E4CA /* UIColor+Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99580942353F8FA0018E4CA /* UIColor+Palette.swift */; };
+		B99580972353FF800018E4CA /* String+ColorAttributed.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99580962353FF800018E4CA /* String+ColorAttributed.swift */; };
 		EA7FB0D62F3D2BB591F47D9F /* Pods_TicTacToeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1B287C06FC1D31C0FE847FD /* Pods_TicTacToeTests.framework */; };
 		F6DD34CB7D68AB932BB04455 /* Pods_TicTacToe_TicTacToeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63BE33598D7BAE352B9484FC /* Pods_TicTacToe_TicTacToeUITests.framework */; };
 /* End PBXBuildFile section */
@@ -80,6 +82,8 @@
 		B97DD0C9235288B2007C9B0D /* TicTacToeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TicTacToeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B97DD0CD235288B2007C9B0D /* BoardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardUITests.swift; sourceTree = "<group>"; };
 		B97DD0CF235288B2007C9B0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B99580942353F8FA0018E4CA /* UIColor+Palette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Palette.swift"; sourceTree = "<group>"; };
+		B99580962353FF800018E4CA /* String+ColorAttributed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+ColorAttributed.swift"; sourceTree = "<group>"; };
 		F1B287C06FC1D31C0FE847FD /* Pods_TicTacToeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TicTacToeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -217,6 +221,8 @@
 		B97DD0DF23529056007C9B0D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				B99580942353F8FA0018E4CA /* UIColor+Palette.swift */,
+				B99580962353FF800018E4CA /* String+ColorAttributed.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -522,7 +528,9 @@
 				B9774E8D2353059F007DDF6B /* GameState.swift in Sources */,
 				B97DD0B02352889E007C9B0D /* BoardViewController.swift in Sources */,
 				B9774E9123535CE4007DDF6B /* SquareStatus.swift in Sources */,
+				B99580972353FF800018E4CA /* String+ColorAttributed.swift in Sources */,
 				B9774E88235304C2007DDF6B /* Game.swift in Sources */,
+				B99580952353F8FA0018E4CA /* UIColor+Palette.swift in Sources */,
 				B9774E822352F303007DDF6B /* SquareButtonView.swift in Sources */,
 				B97DD0AC2352889E007C9B0D /* AppDelegate.swift in Sources */,
 				B9774E84235301D1007DDF6B /* Player.swift in Sources */,

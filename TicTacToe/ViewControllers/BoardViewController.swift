@@ -18,7 +18,7 @@ class BoardViewController: UIViewController {
     // MARK: - Actions
     @IBAction func tapSquare(_ sender: SquareButtonView) {
         viewModel.updateBoardAt(sender) { [unowned self] isFinished in
-            self.gameStateLabel.text = self.viewModel.gameStateText
+            self.gameStateLabel.attributedText = self.viewModel.gameStateText
             self.resetButton.isHidden = !isFinished
         }
     }
@@ -38,8 +38,9 @@ class BoardViewController: UIViewController {
     }
 
     private func setupInitialView() {
-        gameStateLabel.text = viewModel.gameStateText
+        gameStateLabel.attributedText = viewModel.gameStateText
         resetButton.isHidden = !viewModel.showResetButton
+        resetButton.layer.cornerRadius = 10
         resetSquares()
     }
     
